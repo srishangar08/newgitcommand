@@ -1,7 +1,11 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
   return (
     <div className="App">
       <header className="App-header">
